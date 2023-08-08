@@ -5,3 +5,4 @@ Ext/XSL usr/share/keepass2
 debian/keepass2.desktop usr/share/applications
 debian/keepass2.sh usr/bin
 debian/keepass2.xml usr/share/mime/packages
+debian/Spanish.lngx usr/lib/keepass2/Languages

@@ -7,3 +7,4 @@ dont-display-as-dev-version.patch
 disable-clipboard-workaround.patch
 increase-tabheight.patch
 enable-local-help.patch
+add-spanish-language-default
