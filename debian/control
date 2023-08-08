@@ -1,0 +1,47 @@
+Source: keepass2
+Section: utils
+Priority: optional
+Maintainer: Debian CLI Applications Team <pkg-cli-apps-team@lists.alioth.debian.org>
+Uploaders: Julian Taylor <jtaylor.debian@googlemail.com>
+Build-Depends: archmage (>= 1:0.4.2.1~),
+               cli-common-dev (>= 0.7),
+               debhelper (>= 9~),
+               imagemagick,
+               libargon2-1,
+               libmono-cil-dev,
+               mono-devel (>= 2.6.7),
+               mono-xbuild,
+               mono-utils
+Standards-Version: 4.5.0
+Homepage: http://keepass.info/
+Vcs-Git: https://salsa.debian.org/dotnet-team/keepass2.git
+Vcs-Browser: https://salsa.debian.org/dotnet-team/keepass2
+
+Package: keepass2
+Architecture: all
+Depends: ${cli:Depends}, ${misc:Depends}, mono-utils
+Recommends: xsel
+Suggests: keepass2-doc, mono-dmcs, xdotool
+Description: Password manager
+ KeePass is a easy-to-use password manager for Windows, Linux, Mac OS X and
+ mobile devices. You can store your passwords in highly-encrypted databases,
+ which can only be unlocked with one master password and/or a key file.
+ A database consists of only one file that can be transferred from one computer
+ to another easily.
+ KeePass can import data from various file formats. The password list can be
+ exported to various formats, including TXT, HTML, XML and CSV files.
+
+Package: keepass2-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Password manager - Documentation
+ KeePass is a easy-to-use password manager for Windows, Linux, Mac OS X and
+ mobile devices. You can store your passwords in highly-encrypted databases,
+ which can only be unlocked with one master password and/or a key file.
+ A database consists of only one file that can be transferred from one computer
+ to another easily.
+ KeePass can import data from various file formats. The password list can be
+ exported to various formats, including TXT, HTML, XML and CSV files.
+ .
+ This package contains the documentation.

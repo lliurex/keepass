@@ -1,0 +1,37 @@
+From: Debian CLI Applications Team
+ <pkg-cli-apps-team@lists.alioth.debian.org>
+Date: Sun, 10 Apr 2011 15:46:08 +0200
+Subject: use the mono signing key
+
+Forwarded: not-needed
+---
+ KeePass/KeePass.csproj       | 2 +-
+ KeePassLib/KeePassLib.csproj | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Index: keepass2/KeePass/KeePass.csproj
+===================================================================
+--- keepass2.orig/KeePass/KeePass.csproj
++++ keepass2/KeePass/KeePass.csproj
+@@ -11,7 +11,7 @@
+     <AssemblyName>KeePass</AssemblyName>
+     <ApplicationIcon>KeePass.ico</ApplicationIcon>
+     <SignAssembly>true</SignAssembly>
+-    <AssemblyOriginatorKeyFile>KeePass.pfx</AssemblyOriginatorKeyFile>
++    <AssemblyOriginatorKeyFile>/usr/share/cli-common/keys/mono.snk</AssemblyOriginatorKeyFile>
+     <FileUpgradeFlags>
+     </FileUpgradeFlags>
+     <OldToolsVersion>2.0</OldToolsVersion>
+Index: keepass2/KeePassLib/KeePassLib.csproj
+===================================================================
+--- keepass2.orig/KeePassLib/KeePassLib.csproj
++++ keepass2/KeePassLib/KeePassLib.csproj
+@@ -10,7 +10,7 @@
+     <RootNamespace>KeePassLib</RootNamespace>
+     <AssemblyName>KeePassLib</AssemblyName>
+     <SignAssembly>true</SignAssembly>
+-    <AssemblyOriginatorKeyFile>KeePassLib.pfx</AssemblyOriginatorKeyFile>
++    <AssemblyOriginatorKeyFile>/usr/share/cli-common/keys/mono.snk</AssemblyOriginatorKeyFile>
+     <FileUpgradeFlags>
+     </FileUpgradeFlags>
+     <OldToolsVersion>2.0</OldToolsVersion>

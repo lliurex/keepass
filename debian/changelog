@@ -1,0 +1,358 @@
+keepass2 (2.54-0ubuntu1~20.04) focal; urgency=medium
+
+  * No change rebuilt, but sync version number between KeePass.exe and KeePass.exe.conf automatically after build, to workaround the warning dialog on app start.
+
+ -- pandajim (key for lives deb) <ubuntuhandbook1@gmail.com>  Fri, 27 May 2022 21:28:03 -0700
+
+keepass2 (2.47+dfsg-2~16.04.sav0) xenial; urgency=medium
+
+  * Backport to Jammy
+
+ -- Rob Savoury <savoury@savos.tech>  Sat, 13 Mar 2021 13:06:43 -0800
+
+keepass2 (2.47+dfsg-2) unstable; urgency=medium
+
+  * source-only upload, no source changes
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 28 Jan 2021 00:50:51 +0100
+
+keepass2 (2.47+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 17 Jan 2021 14:31:35 +0100
+
+keepass2 (2.45+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 06 Jun 2020 16:17:56 +0200
+
+keepass2 (2.44+dfsg-2) unstable; urgency=medium
+
+  * source-only upload, no source changes
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 22 Apr 2020 21:22:51 +0200
+
+keepass2 (2.44+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #949536)
+  * Switch to python3 archmage (Closes: #943144)
+  * bump standard to 4.5.0, no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 29 Jan 2020 09:57:14 +0100
+
+keepass2 (2.43+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #940123)
+  * bump standard to 4.4.0, no changes required
+  * debian/rules: ignore new moduleref Wer.dll
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 14 Sep 2019 20:22:06 +0200
+
+keepass2 (2.41+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #918929)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 27 Jan 2019 10:29:13 +0100
+
+keepass2 (2.40+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #909050)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 26 Oct 2018 19:41:46 +0200
+
+keepass2 (2.39.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes:# 898488, LP: #1771616)
+  * debian/control: update VCS urls
+  * debian/rules: remove unnecessary get-orig-source target
+  * debian/copyright: change to https format url
+  * debian/rules: add moduleref exclude for KtmW32.dll
+  * bump standard to 4.1.4, no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 25 Jun 2018 18:22:04 +0200
+
+keepass2 (2.38+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (LP: #1744729)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 28 Jan 2018 16:23:59 +0100
+
+keepass2 (2.37+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * bump standard to 4.1.1, no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 21 Oct 2017 13:44:07 +0200
+
+keepass2 (2.36+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update rules for new icon path
+  * remove debian/patches/use-installed-ico-files.patch:
+    does not appear to be necessary with current mono anymore
+  * increase-tabheight.patch: workaround database tab crash (LP: #891029)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 18 Jun 2017 19:28:14 +0200
+
+keepass2 (2.35+dfsg-2) unstable; urgency=medium
+
+  * debian/patches/disable-clipboard-workaround.patch:
+    disable a workaround that messes up the system clipboard (LP: #1659159)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 06 Apr 2017 18:28:27 +0200
+
+keepass2 (2.35+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * dont-display-as-dev-version.patch:
+    don't display as development snapshot due use of different signing key
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 10 Jan 2017 15:48:32 +0100
+
+keepass2 (2.34+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #827676)
+  * add new upstream gpg key
+  * add https debian VCS links
+  * create new /usr/lib/keepass2/Plugins folder on installation
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 27 Jun 2016 19:57:04 +0200
+
+keepass2 (2.33+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #823686)
+  * add moduleref exclude on ShCore.dll for new SetProcessDpiAwareness call
+  * bump standard to 3.9.7, no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 11 May 2016 20:50:56 +0200
+
+keepass2 (2.32+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #817781)
+  * verify signature of source automatically via uscan
+  * create dfsg tarball via debian/copyright and uscan
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 20 Mar 2016 15:05:16 +0100
+
+keepass2 (2.31+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #810567)
+  * bump debhelper compat to version 9
+  * add 64x64 hicolor icon
+  * remove menu file, obsoleted by .desktop file
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 10 Jan 2016 19:38:25 +0100
+
+keepass2 (2.30+dfsg-2) unstable; urgency=medium
+
+  * [d19d930] Build with 4.5 classlib (Closes: #809578)
+
+ -- Jo Shields <directhex@apebox.org>  Sun, 03 Jan 2016 14:51:46 +0000
+
+keepass2 (2.30+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #795601)
+  * bump standard to 3.9.6, no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 24 Aug 2015 23:55:26 +0200
+
+keepass2 (2.29+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * update debian/copyright for new file paths
+  * add field code to Exec key of .desktop file
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 26 Apr 2015 19:28:21 +0200
+
+keepass2 (2.28+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #764720)
+  * refresh patches, remove upstream applied fix-autotype-paste.patch
+  * update files paths in debian/copyright
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 17 Oct 2014 19:54:21 +0200
+
+keepass2 (2.27+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #754575)
+  * remove upstream applied fix-webdav-storage-with-mono-2.11.patch
+  * add fix-autotype-paste.patch to fix pasting with autotype
+  * mention the need for the mono-mcs package to be installed for plugins to
+    work in README.Debian (Closes: #749346)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 17 Aug 2014 15:55:03 +0200
+
+keepass2 (2.26+dfsg-2) unstable; urgency=medium
+
+  * fix-webdav-storage-with-mono-2.11.patch:
+    fix possible dataloss when storing database via webdav (LP: #1315962)
+    thanks to David Lechner for the original patch
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 13 May 2014 19:30:54 +0200
+
+keepass2 (2.26+dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 27 Apr 2014 19:34:35 +0200
+
+keepass2 (2.25+dfsg-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #738056)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 16 Feb 2014 13:29:51 +0100
+
+keepass2 (2.24+dfsg-1) unstable; urgency=low
+
+  * New upstream release (LP: #1116512)
+  * add xsel recommends again, issue seems to be fixed
+  * bump standard to 3.9.5, no changes required
+  * build with LC_ALL=C.UTF-8, required with mono 2 due unicode in source
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 03 Nov 2013 20:00:42 +0100
+
+keepass2 (2.23+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - LP: #1011349
+    - LP: #1174073
+  * Upload to unstable
+  * drop recommends on xsel, use sometimes causes a deadlock
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 27 Jul 2013 13:08:49 +0200
+
+keepass2 (2.22+dfsg-1) experimental; urgency=low
+
+  * New upstream release (LP: #801414)
+  * Use canonical Vcs-Git url
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 14 Apr 2013 14:36:44 +0200
+
+keepass2 (2.21+dfsg-1) experimental; urgency=low
+
+  * New upstream release
+  * Bump standard to 3.9.4, no changes required
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 26 Feb 2013 20:40:14 +0100
+
+keepass2 (2.20.1+dfsg-1) experimental; urgency=low
+
+  * New upstream release
+    - drop upstream applied fix-insecure-tempfile-use.patch
+    - drop upstream applied enforce-minimum-window-and-slider-size.patch
+  * recommend xsel, used for more robust clipboard handling (Closes: #645200)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 06 Oct 2012 14:28:28 +0200
+
+keepass2 (2.19+dfsg-2) unstable; urgency=medium
+
+  * fix-insecure-tempfile-use.patch:
+    - create small tempfiles in user owned directory instead of /tmp
+  * enforce-minimum-window-and-slider-size.patch:
+    - Closes: #686017
+  * suggest mono-dmcs needed to compile plugins
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 17 Sep 2012 19:31:53 +0000
+
+keepass2 (2.19+dfsg-1) unstable; urgency=low
+
+  * New upstream release (LP: #990557)
+    - drop upstream applied fix-winforms-eventordering.patch
+  * debian/copyright: update format url
+  * bump to standard 3.9.3, no changes required
+  * update short description and drop obsolete Replaces
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 02 May 2012 19:21:17 +0200
+
+keepass2 (2.18+dfsg-2) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * add patch for broken event ordering in mono 2.10
+
+  [ Iain Lane ]
+  * Exclude WinMM.dll moduleref, to work around a dh_clideps bug (can be
+    dropped after dh_clideps 0.8.2 lands)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 15 Jan 2012 12:47:52 +0100
+
+keepass2 (2.18+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - refresh patches
+    - drop upstream applied patches:
+      explicitly-PUT-for-webdav-writes.patch
+      prefer-4.0-framework-if-available.patch
+  * add patch to improve autotype when dealing with multiple keyboard layouts
+    - Thanks to amiryal for the patch
+  * disable initial autoupdate popup via patch
+  * update years in debian/copyright
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 30 Dec 2011 15:45:59 +0100
+
+keepass2 (2.16+dfsg-2) unstable; urgency=medium
+
+  * debian/copyright: fix dep-5 syntax errors and wrong license tags
+  * add patch: explicitly-PUT-for-webdav-writes.patch
+    - fixes data loss when saving database to webdav with transactions
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 08 Oct 2011 12:41:09 +0200
+
+keepass2 (2.16+dfsg-1) unstable; urgency=low
+
+  * New upstream release
+  * refresh patches and remove upstream applied ones
+  * update debian/README.source:
+    - removed two non-free icons from orig source
+  * update debian/README.Debian:
+    - multiple instancse working, removed from known issues
+  * add patch: enable-local-help.patch
+    - enables opening of local help files from the application
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 12 Jul 2011 20:19:13 +0200
+
+keepass2 (2.15+dfsg-3) unstable; urgency=low
+
+  * use archmage to create an index of the docs
+  * register docs with doc-base
+  * split out -doc package
+  * patch: add xdotool keysym mapping for square brackets
+  * patch: fix autotype for strings containing apostrophes
+  * patch: increase tab size to avoid crash on changing tabs
+  * patch: fix ftp database access
+  * patch: fix WebClient for ftp access under mono (LP: #783268)
+  * patch: make sure full block is read from crypto stream (LP: #798910)
+  * patch: prefer 4.0 framework if available
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 21 Jun 2011 19:20:37 +0200
+
+keepass2 (2.15+dfsg-2) unstable; urgency=low
+
+  * keepass2.desktop: rename Comment to GenericName
+  * keepass2.desktop: remove security category
+  * bump standards version to 3.9.2, no changes needed
+  * debian/rules: whitelist optional windows module ref Imm32.dll
+  * update manpage
+  * add mimetype x-keepass2 for databases
+  * added a README.Debian
+  * new patch: 06_add-translation-search-paths.patch:
+    - search in XDG directories for translation files
+  * new patch: 07_fix-quicksearch-losing-results-on-defocus.patch
+  * new patch: 08_work-around-quicksearch-crash.patch
+  * new patch: 09_do-not-strip-leading-slash-from-command-line.patch
+  * new patch: 10_fix-single-instance-ipc-in-mono.patch
+  * new patch: 11_disable-multiple-instance-support.patch
+    - broken on unix
+  * new patch: 12_fix-single-instance-enforcement.patch
+    - fixes breakage in mono >= 2.6.7-5
+  * new patch: 13-remove-ToolsVersion-3.5.patch
+    - use Debian's default compiler, remove dependency on gmcs
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 25 Apr 2011 14:22:37 +0200
+
+keepass2 (2.15+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #618935)
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 11 Mar 2011 21:02:00 +0100

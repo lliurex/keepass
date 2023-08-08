@@ -1,0 +1,24 @@
+From: Debian CLI Applications Team
+ <pkg-cli-apps-team@lists.alioth.debian.org>
+Date: Tue, 10 Jan 2017 17:35:29 +0100
+Subject: dont-display-as-dev-version
+
+The debian key for signing the binaries is not the same as upstreams signig key.
+---
+ KeePass/Program.cs | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+Index: keepass2/KeePass/Program.cs
+===================================================================
+--- keepass2.orig/KeePass/Program.cs
++++ keepass2/KeePass/Program.cs
+@@ -959,8 +959,7 @@ namespace KeePass
+ 				Assembly asm = typeof(Program).Assembly;
+ 				byte[] pk = asm.GetName().GetPublicKeyToken();
+ 				string strPk = MemUtil.ByteArrayToHexString(pk);
+-				Debug.Assert(string.IsNullOrEmpty(strPk) || (strPk.Length == 16));
+-				return string.Equals(strPk, "fed2ed7716aecf5c", StrUtil.CaseIgnoreCmp);
++				return true;
+ 			}
+ 			catch(Exception) { Debug.Assert(false); }
+ 
