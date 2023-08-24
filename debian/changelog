@@ -1,3 +1,10 @@
+keepass2 (2.54-0lliurex~20.04) focal; urgency=medium
+
+  * Packaged for Lliurex
+  * Included Spanish and Catalan languages
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Thu, 3 Aug 2023 16:24:36 +0200
+
 keepass2 (2.54-0ubuntu1~20.04) focal; urgency=medium
 
   * No change rebuilt, but sync version number between KeePass.exe and KeePass.exe.conf automatically after build, to workaround the warning dialog on app start.
