@@ -1,4 +1,4 @@
-keepass2 (2.54-0lliurex~20.04) focal; urgency=medium
+keepass2 (2.54-0lliurex~22.04) jammy; urgency=medium
 
   * Packaged for Lliurex
   * Included Spanish and Catalan languages
