@@ -1,5 +1,0 @@
-version=3
-opts="dversionmangle=s/\+dfsg//,\
-repacksuffix=+dfsg,\
-pgpsigurlmangle=s/(?:.*)\/(.*)$/http:\/\/keepass\.info\/integrity\/v2\/$1\.asc/" \
-http://sf.net/keepass/KeePass-([\d\.]+)-Source\.zip
