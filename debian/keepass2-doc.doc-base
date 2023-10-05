@@ -1,0 +1,9 @@
+Document: keepass2-doc
+Title: KeePass 2 Manual
+Author: Dominik Reichl
+Abstract: This manual describes the KeePass 2 password manager
+Section: Data Management
+
+Format: HTML
+Index: /usr/share/doc/keepass2/Chm/index.html
+Files: /usr/share/doc/keepass2/Chm/*.html

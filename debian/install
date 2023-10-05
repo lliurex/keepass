@@ -1,0 +1,9 @@
+Build/KeePass/Release/KeePass.exe usr/lib/keepass2
+Ext/KeePass.config.xml usr/lib/keepass2
+Ext/KeePass.exe.config usr/lib/keepass2
+Ext/XSL usr/share/keepass2
+debian/keepass2.desktop usr/share/applications
+debian/keepass2.sh usr/bin
+debian/keepass2.xml usr/share/mime/packages
+debian/Spanish.lngx usr/lib/keepass2/Languages
+debian/Catalan.lngx usr/lib/keepass2/Languages

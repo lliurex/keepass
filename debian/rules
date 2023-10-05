@@ -1,0 +1,67 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_VERBOSE=1
+export DH_OPTIONS=-v
+export SHELL=/bin/bash -e
+include /usr/share/cli-common/cli.make
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf KeePass/obj
+	rm -rf Build/KeePass/ Build/Chm
+	rm -f debian/keepass2.png
+	# remove files created by archmage
+	rm -f Docs/arch_contents.html Docs/arch_frameset.html \
+	      Docs/arch_header.html Docs/index.html Docs/arch_css.css
+	rm -rf Docs/icons
+	dh_auto_clean
+
+override_dh_auto_build:
+#mdtool build -c:Release -p:KeePass
+	LC_ALL=C.UTF-8 xbuild /target:KeePass /property:Configuration=Release
+# build an index from the raw chm source
+	archmage -x Docs Build/Chm
+	mv Build/Chm/chm/* Build/Chm
+
+override_dh_install:
+	convert $(CURDIR)/KeePass/Resources/Icons/KeePass.ico keepass2.png
+	mkdir -p $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/16x16/apps
+	mv keepass2-11.png $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/16x16/apps/keepass2.png
+	mkdir -p $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/24x24/apps
+	mv keepass2-9.png $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/24x24/apps/keepass2.png
+	mkdir -p $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/32x32/apps
+	mv keepass2-8.png $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/32x32/apps/keepass2.png
+	mkdir -p $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/48x48/apps
+	mv keepass2-7.png $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/48x48/apps/keepass2.png
+	mkdir -p $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/64x64/apps
+	mv keepass2-6.png $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/64x64/apps/keepass2.png
+	mkdir -p $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/256x256/apps
+	mv keepass2-5.png $(CURDIR)/debian/keepass2/usr/share/icons/hicolor/256x256/apps/keepass2.png
+	rm -f keepass2*.png
+	dh_install
+	mv $(CURDIR)/debian/keepass2/usr/bin/keepass2.sh $(CURDIR)/debian/keepass2/usr/bin/keepass2
+	# create plugin location
+	mkdir $(CURDIR)/debian/keepass2/usr/lib/keepass2/Plugins
+	chmod +x debian/modifyconf && bash debian/modifyconf
+
+
+override_dh_installchangelogs:
+	dh_installchangelogs Docs/History.txt
+
+override_dh_installdocs:
+	# skip signing key readme
+	dh_installdocs -pkeepass2 -XReadMe_PFX.txt
+	dh_installdocs -pkeepass2-doc -XReadMe_PFX.txt --link-doc=keepass2
+
+override_dh_clideps:
+	dh_clideps --exclude-moduleref=KeePassLibC32.dll --exclude-moduleref=KeePassLibC64.dll\
+		--exclude-moduleref=ShlWApi.dll --exclude-moduleref=Kernel32.dll \
+		--exclude-moduleref=User32.dll --exclude-moduleref=ComCtl32.dll \
+		--exclude-moduleref=ComCtl32.dll --exclude-moduleref=UxTheme.dll \
+		--exclude-moduleref=Shell32.dll --exclude-moduleref=DwmApi.dll \
+		--exclude-moduleref=Imm32.dll --exclude-moduleref=WinMM.dll \
+		--exclude-moduleref=ShCore.dll --exclude-moduleref=KtmW32.dll \
+		--exclude-moduleref=Wer.dll --exclude-moduleref=libargon2.so.0

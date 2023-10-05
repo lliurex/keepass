@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+EXEVERSION=$(/usr/bin/monodis --assembly debian/keepass2/usr/lib/keepass2/KeePass.exe | grep Version)
+arrIn=(${EXEVERSION// / })
+sed -i 's/newVersion="\([0-9\.]*\)"/newVersion="'${arrIn[1]}'"/' debian/keepass2/usr/lib/keepass2/KeePass.exe.config
+
+exit 0

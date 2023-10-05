@@ -1,0 +1,10 @@
+use-the-mono-signing-key.patch
+skip-sgen-run-during-build.patch
+fix-XSL-search-path.patch
+disable-autoupdate-dialog.patch
+force_toolsversion_4
+dont-display-as-dev-version.patch
+disable-clipboard-workaround.patch
+increase-tabheight.patch
+enable-local-help.patch
+add-spanish-language-default

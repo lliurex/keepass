@@ -1,0 +1,25 @@
+From: Julian Taylor <jtaylor.debian@googlemail.com>
+Date: Fri, 30 Dec 2011 16:32:12 +0100
+Subject: disable autoupdate dialog
+
+does makes not much sense for the package
+Forwarded: not-needed
+---
+ KeePass/App/Configuration/AceApplication.cs | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Index: keepass2/KeePass/App/Configuration/AceApplication.cs
+===================================================================
+--- keepass2.orig/KeePass/App/Configuration/AceApplication.cs
++++ keepass2/KeePass/App/Configuration/AceApplication.cs
+@@ -463,8 +463,8 @@ namespace KeePass.App.Configuration
+ 			set { m_bCheckForUpdate = value; }
+ 		}
+ 
+-		private bool m_bCheckForUpdateCfg = false;
+-		[DefaultValue(false)]
++		private bool m_bCheckForUpdateCfg = true;
++		[DefaultValue(true)]
+ 		public bool CheckForUpdateConfigured
+ 		{
+ 			get { return m_bCheckForUpdateCfg; }
